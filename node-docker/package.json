@@ -1,0 +1,32 @@
+{
+  "name": "node-docker-express-graphql",
+  "version": "1.0.0",
+  "description": "Simple node docker on express graphql token on rsa encrypt",
+  "repository": "https://github.com/vinigomescunha",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run tsc && node ./dist/index.js",
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "vinicius",
+  "license": "ISC",
+  "dependencies": {
+    "@types/body-parser": "^1.19.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "express-jwt": "^5.3.3",
+    "graphql": "^14.6.0",
+    "redis": "^3.0.2",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/express-jwt": "0.0.42",
+    "@types/jsonwebtoken": "^8.3.9",
+    "@types/node": "^13.11.1",
+    "@types/redis": "^2.8.17"
+  }
+}
