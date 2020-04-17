@@ -1,0 +1,29 @@
+version: '3'
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    networks:
+      mynw:
+        ipv4_address: 10.1.0.2
+  redis:
+    image: 'bitnami/redis:latest'
+    ports:
+      - '6379:6379'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./redis-data:/bitnami/redis/data
+    networks:
+      mynw:
+        ipv4_address: 10.1.0.3
+networks:
+  mynw:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.1.0.0/24
